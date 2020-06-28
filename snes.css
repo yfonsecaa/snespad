@@ -1,0 +1,134 @@
+/*This class defines the base attributes of the skin*/
+.controller.custom{
+        background: url(snes-assets/base.png); 
+    height: 526px;
+    width: 1043px;
+}
+.custom.disconnected { /* This class shows an image when the controller is disconnected */
+    background: url(ps3-assets/base-disconnect.png);
+}
+/* This hides the controller's button when disconnected so only the background image remains */ 
+.custom.disconnected div {
+    display: none;
+}
+.custom .triggers{ /* The triggers are housed inside a div, so this sizes the div properly and positions it */
+    width: 853px;
+    height: 69px;
+    position: absolute;
+    left: 94px;
+}
+.custom .trigger{/* These are the actual triggers themselves */
+    width:248px;
+    height:69px;
+    background: url(snes-assets/Trigger.png);
+    opacity: 0;
+}
+/* The left and right classes below are used to position the triggers
+within the div they're contained in. Since their positions is realtive
+to the size of the parent element, we simply resize the parent element 
+above to achieve the desired position. */
+.custom .trigger.left{ 
+    float: left;
+}
+.custom .trigger.right{
+    float: right;
+}
+
+/* This is to size and position the containing div for the 
+start and select buttons. */
+.custom .arrows{
+    position: absolute;
+    width: 187px;
+    height: 66px;
+    top: 306px;
+    left: 387px;
+}
+/* Setting the size and CSS sprite for the start adn select buttons */
+.custom .back, .custom .start{
+    background: url(snes-assets/Menus.png);
+    width: 74px;
+    height: 65px;
+}
+.custom .back.pressed, .custom .start.pressed{
+    background-position-y:-96px;
+}
+.custom .back{
+    float: left;
+    width: 74px;
+}
+.custom .start{
+    float: right;
+    width: 74px;
+}
+/* Positioning and size of the container for the face buttons */
+.custom .abxy{
+    position: absolute;
+    width: 275px;
+    height: 275px;
+    top: 190px;
+    left: 685px;
+}
+/* base class used to simplify the sprite mapping */
+.custom .button{
+    position: absolute;
+    width:76px;
+    height:76px;
+    background: url(snes-assets/HighlightButton.png);
+     opacity: 0;
+}
+.custom .button.pressed{
+    opacity: 1;
+}
+.custom .a{
+    top: 155px;
+    left: 100px;
+}
+.custom .b{
+    top: 78px;
+    right: 0px;
+}
+.custom .x{
+    top: 78px;
+}
+.custom .y{
+    left: 100px;
+}
+/* Dpad possitioning and sizing */
+.custom .dpad{
+    position: absolute;
+    width: 140px;
+    height: 132px;
+    top: 220px;
+    left: 130px;
+}
+.custom .face{
+    background: url(snes-assets/dpad.png);
+    position: absolute;
+    opacity: 0;
+}
+.custom .face.left, .custom .face.right, .custom .face.up, .custom .face.down{
+    width: 42px;
+    height: 36px;
+}
+.custom .face.up{
+    left: 71px;
+    top: 10px;
+    background-position-x: -44px;
+}
+.custom .face.down{
+    left: 71px;
+    top: 130px;
+    background-position-x: -87px;
+}
+.custom .face.left{
+    top: 69px;
+    left: 10px;
+}
+.custom .face.right{
+    top: 69px;
+    left: 125px;
+    background-position-x: -122px;
+}
+.custom .face.pressed{
+    opacity: 1;
+}
